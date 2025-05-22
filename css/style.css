@@ -42,6 +42,17 @@ body.homepage-background {
     background-color: #333; /* A slightly darker fallback color */
 }
 
+/* Pre-Production page specific background */
+body.pre-production-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('../images/pre-production-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #333; /* Fallback color */
+}
+
+
 /* Dark Mode styles */
 body.dark-mode {
     color: var(--color-text-dark);
@@ -52,6 +63,12 @@ body.dark-mode {
 body.homepage-background.dark-mode {
     /* Stronger gradient for dark mode to ensure white text visibility */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('../images/kolektib-hero-bg.jpg');
+    background-color: #222; /* Darker fallback for dark mode */
+}
+
+/* Pre-Production page specific background in Dark Mode */
+body.pre-production-background.dark-mode {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('../images/pre-production-hero-bg.jpg');
     background-color: #222; /* Darker fallback for dark mode */
 }
 
@@ -80,6 +97,17 @@ body.homepage-background .mobile-nav {
     margin-bottom: 20px; /* Add some space between sections for visual separation */
 }
 
+/* Pre-Production page adjustments for elements when full-page background is active */
+body.pre-production-background header,
+body.pre-production-background .page-content .content-section,
+body.pre-production-background .page-navigation,
+body.pre-production-background .mobile-nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background, 90% opaque */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Soft border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    margin-bottom: 20px; /* Add some space between sections for visual separation */
+}
+
 /* Introduction section on homepage is transparent */
 body.homepage-background .introduction {
     background-color: transparent; /* Remove background for seamless flow */
@@ -98,12 +126,31 @@ body.homepage-background footer {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Add shadow for readability */
 }
 
+/* Footer background transparent on pre-production page */
+body.pre-production-background footer {
+    background-color: transparent;
+    border-top: none;
+    box-shadow: none;
+    color: var(--color-white); /* Ensure text is readable over the dark background */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Add shadow for readability */
+}
+
 
 /* Dark mode version for the homepage background elements */
 body.homepage-background.dark-mode header,
 body.homepage-background.dark-mode .page-content .content-section,
 body.homepage-background.dark-mode .page-navigation,
 body.homepage-background.dark-mode .mobile-nav {
+    background-color: rgba(44, 44, 44, 0.9); /* Dark background, 90% opaque */
+    border-color: rgba(255, 255, 255, 0.1); /* Lighter border for dark mode */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode version for the pre-production page background elements */
+body.pre-production-background.dark-mode header,
+body.pre-production-background.dark-mode .page-content .content-section,
+body.pre-production-background.dark-mode .page-navigation,
+body.pre-production-background.dark-mode .mobile-nav {
     background-color: rgba(44, 44, 44, 0.9); /* Dark background, 90% opaque */
     border-color: rgba(255, 255, 255, 0.1); /* Lighter border for dark mode */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -120,6 +167,15 @@ body.homepage-background.dark-mode .introduction {
 
 /* Footer background transparent on homepage in dark mode */
 body.homepage-background.dark-mode footer {
+    background-color: transparent;
+    border-top: none;
+    box-shadow: none;
+    color: var(--color-white); /* Ensure text is white in dark mode */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Footer background transparent on pre-production page in dark mode */
+body.pre-production-background.dark-mode footer {
     background-color: transparent;
     border-top: none;
     box-shadow: none;
@@ -545,6 +601,17 @@ body.homepage-background.dark-mode .introduction p {
     font-size: 3em;
     color: var(--color-primary);
 }
+
+/* Pre-Production page specific adjustments for page-title text color */
+body.pre-production-background .page-title {
+    color: var(--color-white); /* White text for page title on pre-production background */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Strong text-shadow for readability */
+}
+
+body.pre-production-background.dark-mode .page-title {
+    color: var(--color-white); /* Keep white in dark mode too */
+}
+
 
 .page-content .content-section {
     background-color: var(--color-card-background-light);
